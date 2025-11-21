@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Hover & Active Effects</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            gap: 40px;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 0 15px;
+            padding-bottom: 3px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #007bff;
+            border-bottom-color: #007bff; 
+        }
+        .nav-link:active {
+            color: #0056b3; 
+            opacity: 0.7;
+        }
+        .btn-3d {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.1s, box-shadow 0.1s;
+            box-shadow: 0 6px 0 #c0392b; 
+        }
+        .btn-3d:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 0 #c0392b;
+            background-color: #ff6b81;
+        }
+        .btn-3d:active {
+            transform: translateY(6px); 
+            box-shadow: 0 0 0 #c0392b; 
+        }
+        .card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card h3 { margin: 0 0 10px 0; }
+        .card:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 15px 30px rgba(118, 75, 162, 0.4);
+        }
+        .card:active {
+            transform: scale(0.95); 
+            box-shadow: 0 5px 10px rgba(118, 75, 162, 0.2);
+        }
+    </style>
+</head>
+<body>
+        <p></p>
+        <div class="card">
+            <h3>Click Me</h3>
+        </div>
+</body>
+</html>

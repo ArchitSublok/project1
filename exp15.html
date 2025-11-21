@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Responsive Design</title>
+  <style>
+   
+    * {
+      box-sizing: border-box; 
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: black;
+      line-height: 1.6;
+    }
+
+    .container {
+      margin: 40px auto; 
+      padding: 0 20px;   
+      max-width: 1200px; 
+      min-width: 300px;  
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+
+    .box {
+      background-color: white;
+      padding: 30px;
+      flex: 1 1 300px; 
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px auto;
+        display: block; 
+      }
+
+      .box {
+        background-color: purple; 
+        margin-bottom: 15px;
+        width: 100%; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="box">
+      <h2>Concept 1</h2>
+      <p>This box adapts to the screen size. On a desktop, it sits in a row. On mobile, it stacks vertically.</p>
+    </div>
+
+    <div class="box">
+      <h2>Concept 2</h2>
+      <p>We use max-width on the container to ensure lines of text don't get too long to read comfortably.</p>
+    </div>
+
+    <div class="box">
+      <h2>Concept 3</h2>
+      <p>Media queries change the background color of these cards to help you visualize the breakpoints.</p>
+    </div>
+  </div>
+
+</body>
+</html>

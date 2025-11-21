@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Preview</title>
+    <style>
+        /* --- INTERNAL CSS START --- */
+        
+        /* General Page Layout */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Container for the demos */
+        .demo-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        @media (min-width: 600px) {
+            .demo-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Card Styling */
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+        }
+
+        /* --- DEMO 1: HOVER TRANSITION --- */
+        /* This uses the 'transition' property for smooth state changes */
+        .hover-btn {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            outline: none;
+            
+            /* The Magic: Animate all changes over 0.3 seconds */
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            /* Note: cubic-bezier gives it a slight "bouncy" feel */
+        }
+
+        .hover-btn:hover {
+            background-color: #a29bfe;
+            transform: scale(1.1) translateY(-5px); /* Grow and move up */
+            box-shadow: 0 15px 30px rgba(108, 92, 231, 0.4); /* Cast shadow */
+            letter-spacing: 2px; /* Spread letters slightly */
+        }
+        
+        .hover-btn:active {
+            transform: scale(0.95); /* Shrink slightly on click */
+        }
+
+        /* --- DEMO 2: KEYFRAME ANIMATION --- */
+        /* This uses @keyframes for a scripted sequence */
+        
+        /* @keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        } */
+
+        .animate-entrance {
+            /* Apply the keyframe animation defined above */
+            animation: fadeInSlideUp 0.8s ease-out forwards;
+        }
+          @keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .status-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #00b894;
+        }
+
+        /* Button to re-trigger animation via JS */
+        .replay-btn {
+            margin-top: 40px;
+            background: transparent;
+            border: 2px solid #b2bec3;
+            color: #636e72;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .replay-btn:hover {
+            background: #dfe6e9;
+            border-color: #636e72;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>CSS Animation Demo</h1>
+    <p>Hover over elements or reload to see effects</p>
+
+    <div class="demo-container">
+        
+        <!-- Demo 1: Transition -->
+        <div class="card">
+            <h3>Transition</h3>
+            <p style="font-size: 0.9em; margin-bottom: 20px;">Interactivity (Hover)</p>
+            <button class="hover-btn">Hover Me</button>
+        </div>
+
+        <!-- Demo 2: Keyframe -->
+        <!-- The ID is used by JS to reset the animation -->
+        <div id="keyframe-card" class="card animate-entrance">
+            <div class="status-icon">✨</div>
+            <h3>Keyframes</h3>
+            <p style="font-size: 0.9em; margin-bottom: 0;">Entrance Animation</p>
+        </div>
+
+    </div>
+
+    <button class="replay-btn" onclick="replayAnimation()">↻ Replay Keyframe Animation</button>
+
+
+</body>
+</html>

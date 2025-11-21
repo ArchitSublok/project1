@@ -1,0 +1,25 @@
+<html> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>CSS Specificity Demo</title> 
+ 
+  <link rel="stylesheet" href="exp9.css"> 
+  <style> 
+  h1{
+    color:pruple;
+    font-size: 17px;
+  }
+    .CLASS_EXAMPLE { 
+      font-size: 20px;
+      color: blue; 
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    }
+  </style> 
+</head> 
+<body> 
+  <h1 style="font-size: 15px; color: red; font-family: 'Courier New', Courier, monospace;">This is an example of element selector.</h1> 
+  <p class="CLASS_EXAMPLE" >This is an example of Class selector.</p> 
+  <p id="ID_EXAMPLE" id="unique" style="color: orange;">This is an example of ID selector.</p> 
+</body> 
+</html> 

@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>CSS Units Demo</title> 
+  <style> 
+  
+    html { 
+      font-size: 16px; 
+    } 
+ 
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 20px; 
+      background-color: #f9f9f9; 
+    } 
+ 
+    h1 { 
+      text-align: center; 
+      margin-bottom: 20px; 
+    } 
+ 
+    .container { 
+      border: 2px solid #000; 
+      width: 80%;
+      margin: 0 auto; 
+      padding: 20px; 
+      background-color: white; 
+      border-radius: 10px; 
+    } 
+ 
+     
+    .px-box { 
+      width: 300px; 
+      height: 100px; 
+      background-color: #ffb3b3; 
+      font-size: 16px; 
+      margin: 10px 0; 
+      padding: 10px; 
+    } 
+ 
+ 
+    .percent-box { 
+      width: 50%; 
+      height: 100px; 
+      background-color: #b3ffb3; 
+      font-size: 120%; 
+      margin: 10px 0; 
+      padding: 10px; 
+    } 
+ 
+
+    .em-box { 
+      width: 20em; 
+      height: 5em; 
+      background-color: #b3d9ff; 
+      font-size: 1.5em; 
+      margin: 10px 0; 
+      padding: 10px; 
+    } 
+ 
+
+    .rem-box { 
+      width: 20rem; 
+      height: 5rem; 
+      background-color: #fff3b3; 
+      font-size: 1.5rem; 
+      margin: 10px 0; 
+      padding: 10px; 
+    } 
+ 
+  
+  </style> 
+</head> 
+<body> 
+ 
+  <h1>CSS Units: px, %, em, rem</h1> 
+ 
+  <div class="container"> 
+    <div class="px-box"> 
+      <div class="label">Using px (pixels):</div> 
+      This box is <b>fixed-size</b> — it won't change when you resize or zoom. 
+    </div> 
+ 
+    <div class="percent-box"> 
+      <div class="label">Using % (percent):</div> 
+      This box width depends on its <b>parent container's width</b>. 
+    </div> 
+ 
+    <div class="em-box"> 
+      <div class="label">Using em:</div> 
+      This box size depends on the <b>font size of its parent</b>. 
+    </div> 
+ 
+    <div class="rem-box"> 
+      <div class="label">Using rem:</div> 
+      This box size depends on the <b>root (html) font size</b>. 
+    </div> 
+   </div> 
+ 
+</body> 
+</html>

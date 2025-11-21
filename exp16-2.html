@@ -1,0 +1,26 @@
+Image Zoom on Hover 
+ 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Image Hover Zoom</title> 
+  <style> 
+    .image-container img { 
+      width: 300px; 
+      height: auto; 
+      transition: transform 0.3s ease; 
+    } 
+ 
+    .image-container img:hover { 
+      transform: scale(1.1); 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="image-container"> 
+    <img src="basketball.jpg" alt="Basketball Image"> 
+  </div> 
+</body> 
+</html> 
